@@ -152,10 +152,10 @@ const loadProviderForNetwork = async (
   const network = NETWORK_CONFIG[networkName];
   const { proxyContract, relayAdaptContract, deploymentBlock, publicName } =
     network;
-  if (!proxyContract) {
+  if (!isDefined(proxyContract)) {
     throw new Error(`Could not find Proxy contract for network: ${publicName}`);
   }
-  if (!relayAdaptContract) {
+  if (!isDefined(relayAdaptContract)) {
     throw new Error(
       `Could not find Relay Adapt contract for network: ${publicName}`,
     );
