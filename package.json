@@ -26,7 +26,7 @@
     "prepare": "npm run compile",
     "postinstall": "node postinstall.js",
     "build-graphql": "graphclient build && rm -rf src/services/railgun/quick-sync/graphql/.graphclient && mv .graphclient src/services/railgun/quick-sync/graphql",
-    "installengine": "npm explore @railgun-community/engine -- yarn install"
+    "installengine": "npm explore @railgun-community/engine -- yarn installandcompile"
   },
   "dependencies": {
     "@graphql-mesh/cache-localforage": "^0.7.20",
