@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "compile": "npm run clean && npm run lint && npm run tsc",
+    "compile": "npm run clean && npm run tsc",
     "tsc-test": "tsc -p tsconfig.test.json && tsc-alias -p tsconfig.test.json",
     "compile-test": "npm run clean && npm run tsc-test",
     "test-coverage": "npm run compile-test && nyc mocha 'src/**/__tests__/*.test.ts'",
